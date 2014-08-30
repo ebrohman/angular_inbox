@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html ng-app="testApp">
+<head>
+  <title>Angular JS</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="angular.css">
+  <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+  <script type="text/javascript" src="angular.js"></script>
+</head>
+<body ng-controller="MailCtrl">
+  <h1><span class="blue">G</span><span class="red">e</span><span class="yellow">e</span><span class="blue">M</span><span class="green">a</span><span class="red">i</span><span class="yellow">l</span></h1>
+  <table>
+    <tr>
+      <td class="menu">
+        <button class="btn btn-primary btn-sm" ng-click="composeVisible = !composeVisible">Compose</button>
+        <ul>
+          <li class="selected">Inbox (<span class="count">{{ count }}</span>)</li>
+          <li>Sent</li>
+          <li>Trash</li>
+        </ul>
+      </td>
+      <td class="emails">
+        <table class="table table-striped">
+          <tr>
+            <th>from:</th>
+            <th>message:</th>
+          </tr>
+          <tr ng-repeat="email in emails">
+              <td>{{email.from}}</td>
+              <td>{{email.message}}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <form name="compose" class="compose" action="" ng-show="composeVisible" ng-submit="addEmail()">
+    <h5>New Email</h5>
+    <div class="form-group">
+      <input type="text" name="recipient" class="recipient form-control" placeholder="Recipient" ng-model="from">
+    </div>
+    <div class="form-group">
+      <textarea name="message" class="message form-control" rows="5" placeholder="Message" ng-model="message"></textarea>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary" value="Send">
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* Base */
+body {
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px
+}
+
+.blue { color: #156beb; }
+.red { color: #d4412c; }
+.yellow { color: #ffb403; }
+.green { color: #009c5a; }
+
+/* Menu */
+.menu {
+  padding-right: 20px;
+  float: left;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+
+}
+
+.menu .selected {
+  font-weight: bold;
+}
+
+/* Emails */
+.emails {
+  width: 100%;
+}
+
+/* Compose */
+.compose {
+  position: fixed;
+  width: 100%;
+  max-width: 400px;
+  bottom: 0;
+  right: 20px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.compose h5 {
+  color: white;
+  background: #333;
+  margin: 0 0 20px 0;
+  padding: 10px 20px;
+}
+
+.compose .form-group {
+  padding: 0 10px;
+}
